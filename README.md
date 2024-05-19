@@ -1,6 +1,9 @@
-### Sistema Operacional
+<DOCTYPE html>
+  <html lang="pt-br">
+<body>
+<h2 style="fony-weight: bold;">Sistema Operacional</h2>
 <p>É Apenas Um Sistema Operacional Simples</p>
 <p>Senha computador: 1590</p>
-<p>Para usar o sistema operacional Você Precisa:</p>
-<ul><li>Acessar Os Arquivos E Copiar Os Códigos</li><li>Testar No Codepen Ou Outra Plataforma</li></ul>
-<p>Espero Que Goste Do Meu Sistema Operacional:)</p>
+<div>
+</body>
+</html>
