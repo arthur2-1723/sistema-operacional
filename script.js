@@ -105,6 +105,7 @@ let operacao
       document.getElementById('areaDeTrabalho').style.display = 'none';
       
       document.getElementById('calculadora').style.display = 'block';
+      document.getElementById('hora').style.display = 'none';
     }
 function voltarcalc() {
   document.getElementById('calculadora').style.display = 'none';
@@ -123,3 +124,81 @@ function voltarnaoenc() {
   
   document.getElementById('areaDeTrabalho').style.display = 'block'
  }
+
+function criarCalculadora() {
+  // Variables and HTML elements
+  const display = document.getElementById('display');
+  let valorAnterior = null;
+  let operacaoPendente = null;
+
+  // Function to handle digit input
+  function digitar(numero) {
+  if (typeof numero !== 'string' || !numero.match(/^[0-9]$/)) {
+    // Handle invalid input (not a digit)
+    console.error(`Invalid input: "${numero}". Only digits are allowed.`);
+    return;
+  }
+
+  display.value += numero;
+}
+
+
+  // Function to handle operations (+, -, *, =)
+  function operacao(op) {
+    if (valorAnterior === null) {
+      valorAnterior = parseFloat(display.value);
+      display.value = "";
+    } else {
+      calcularResultado();
+      valorAnterior = parseFloat(display.value);
+      display.value = "";
+    }
+    operacaoPendente = op;
+  }
+
+  // Function to calculate the result
+  function calcularResultado() {
+    const valorAtual = parseFloat(display.value);
+    let resultado;
+
+    switch (operacaoPendente) {
+      case '+':
+        resultado = valorAnterior + valorAtual;
+        break;
+      case '-':
+        resultado = valorAnterior - valorAtual;
+        break;
+      case '*':
+        resultado = valorAnterior * valorAtual;
+        break;
+      // Add other cases for operations like division, etc.
+    }
+
+    display.value = resultado;
+    valorAnterior = null;
+    operacaoPendente = null;
+  }
+
+  // Function to clear the display
+  function limpar() {
+    display.value = "";
+    valorAnterior = null;
+    operacaoPendente = null;
+  }
+
+  // Function to handle the equal button (=)
+  function igualar() {
+    calcularResultado();
+  }
+
+  // Bind functions to calculator buttons
+  const botoesDigitos = document.querySelectorAll('.teclas .linha button[data-tipo="numero"]');
+  const botoesOperacoes = document.querySelectorAll('.teclas .linha button[data-tipo="operacao"]');
+  const botaoLimpar = document.querySelector('.teclas .linha button[data-tipo="limpar"]');
+  const botaoIgualar = document.querySelector('.teclas .linha button[data-tipo="igualar"]');
+
+  botoesDigitos.forEach(botao => botao.addEventListener('click', () => digitar(botao.value)));
+  botoesOperacoes.forEach(botao => botao.addEventListener('click', () => operacao(botao.value)));
+  botaoLimpar.addEventListener('click', limpar);
+  botaoIgualar.addEventListener('click', igualar);
+}
