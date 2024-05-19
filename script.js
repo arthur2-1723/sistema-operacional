@@ -1,15 +1,3 @@
-function fazerLogin() {
-    const usuario = document.getElementById('usuario').value;
-    const senha = document.getElementById('senha').value;
-
-    if (usuario === 'admin' && senha === '1234') {
-        document.getElementById('login').style.display = 'none';
-        document.getElementById('areaDeTrabalho').style.display = 'block';
-    } else {
-        alert('Usuário ou senha inválidos.');
-    }
-}
-
 function abrirAplicativo1() {
     alert('Abrindo Aplicativo 1...');
 }
@@ -21,11 +9,10 @@ function abrirAplicativo2() {
 function desligar() {
     if (confirm('Deseja realmente desligar?')) {
         alert('Sistema desligado.');
-        window.location.reload(); // Simula o desligamento e recarrega a página
+        window.location.reload();
+      
     }
 }
-
-// Funções existentes (fazerLogin, abrirAplicativo1, abrirAplicativo2, desligar)
 
 function abrirNavegador() {
     document.getElementById('areaDeTrabalho').style.display = 'none';
@@ -114,3 +101,25 @@ let display = document.getElementById('display');
 let valorAnterior = null;
 let operacao
 
+    function abrircalculadora(){
+      document.getElementById('areaDeTrabalho').style.display = 'none';
+      
+      document.getElementById('calculadora').style.display = 'block';
+    }
+function voltarcalc() {
+  document.getElementById('calculadora').style.display = 'none';
+  
+  document.getElementById('areaDeTrabalho')
+}
+
+function naoenc() {
+  document.getElementById('naoenc').style.display = 'block'
+  
+  document.getElementById('areaDeTrabalho').style.display = 'none';
+}
+
+function voltarnaoenc() {
+  document.getElementById('naoenc').style.display = 'none';
+  
+  document.getElementById('areaDeTrabalho').style.display = 'block'
+ }
