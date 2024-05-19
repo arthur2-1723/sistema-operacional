@@ -7,8 +7,10 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+  <span style="font-weight: bold; font-size: 40px; margin-bottom: 10px;" id="hora"></span>
     <div id="telaBloqueio" style="display: block;">
         <h1>Tela de Bloqueio</h1>
+   
         <input type="password" id="senha" placeholder="Digite sua senha">
         <button onclick="desbloquear()">Desbloquear</button>
     </div>
@@ -17,10 +19,20 @@
         <h1>Área de Trabalho</h1>
         <div class="icone" onclick="abrirLoja()">Loja</div>
         <div class="icone" onclick="abrirExplorador()">Explorador de Arquivos</div>
-      <div class="icone" onclick="naoenc()">Calculadora</div>
+      <div class="icone" onclick="abrircalculadora()">Calculadora</div>
         <div class="icone" onclick="abrirAplicativo1()">Aplicativo 1</div>
         <div class="icone" onclick="abrirAplicativo2()">Aplicativo 2</div>
-  <div id="calculadora" style="display: none; position: fixed; top: 50%; left: 50%; transform: translate(-50%, -50%); z-index: 1000; width: 300px; padding: 20px; background-color: #fff; border: 1px solid #ccc; border-radius: 5px;">
+ 
+
+   
+      <div id="relogio" style="position: fixed; top: 20px; right: 20px; z-index: 1000;">
+    <span id="hora"></span>
+</div>
+
+        <button onclick="desligar()">Desligar</button>
+      <button onclik="sair()">Sair</button>
+    </div>
+ <div id="calculadora" style="display: none; position: fixed; top: 50%; left: 50%; transform: translate(-50%, -50%); z-index: 1000; width: 300px; padding: 20px; background-color: #fff; border: 1px solid #ccc; border-radius: 5px;">
         <h1>Calculadora</h1>
         <input type="text" id="display" placeholder="0">
         <div class="teclas">
@@ -48,17 +60,10 @@
                 <button onclick="igualar()">=</button>
                 <button onclick="limpar()">C</button>
             </div>
+          <button onclick="voltarcalc">Voltar</voltar>
         </div>
     </div>
-
-   
-      <div id="relogio" style="position: fixed; top: 20px; right: 20px; z-index: 1000;">
-    <span id="hora"></span>
-</div>
-
-        <button onclick="desligar()">Desligar</button>
-    </div>
-
+  
     <div id="loja" style="display: none;">
         <h1>Loja Simples</h1>
         <div class="produto">
