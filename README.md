@@ -7,5 +7,6 @@
   
   <h2>Log De Atualização</h2>
   <p>Calculadora Em Beta</p>
+  <a href="#">Acessar Sistema Operacional</a>
 </body>
 </html>
