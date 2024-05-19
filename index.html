@@ -17,38 +17,40 @@
         <h1>Área de Trabalho</h1>
         <div class="icone" onclick="abrirLoja()">Loja</div>
         <div class="icone" onclick="abrirExplorador()">Explorador de Arquivos</div>
+      <div class="icone" onclick="naoenc()">Calculadora</div>
         <div class="icone" onclick="abrirAplicativo1()">Aplicativo 1</div>
         <div class="icone" onclick="abrirAplicativo2()">Aplicativo 2</div>
-   <div id="calculadora" style="display: none; position: fixed; top: 50%; left: 50%; transform: translate(-50%, -50%); z-index: 1000; width: 300px; padding: 20px; background-color: #fff; border: 1px solid #ccc; border-radius: 5px;">
-    <h1>Calculadora</h1>
-    <input type="text" id="display" placeholder="0">
-    <div class="teclas">
-        <div class="linha">
-            <button onclick="digitar('7')">7</button>
-            <button onclick="digitar('8')">8</button>
-            <button onclick="digitar('9')">9</button>
-            <button onclick="operacao('+')">+</button>
-        </div>
-        <div class="linha">
-            <button onclick="digitar('4')">4</button>
-            <button onclick="digitar('5')">5</button>
-            <button onclick="digitar('6')">6</button>
-            <button onclick="operacao('-')">-</button>
-        </div>
-        <div class="linha">
-            <button onclick="digitar('1')">1</button>
-            <button onclick="digitar('2')">2</button>
-            <button onclick="digitar('3')">3</button>
-            <button onclick="operacao('*')">*</button>
-        </div>
-        <div class="linha">
-            <button onclick="digitar('0')">0</button>
-            <button onclick="digitar('.')">.</button>
-            <button onclick="igualar()">=</button>
-            <button onclick="limpar()">C</button>
+  <div id="calculadora" style="display: none; position: fixed; top: 50%; left: 50%; transform: translate(-50%, -50%); z-index: 1000; width: 300px; padding: 20px; background-color: #fff; border: 1px solid #ccc; border-radius: 5px;">
+        <h1>Calculadora</h1>
+        <input type="text" id="display" placeholder="0">
+        <div class="teclas">
+            <div class="linha">
+                <button onclick="digitar('7')">7</button>
+                <button onclick="digitar('8')">8</button>
+                <button onclick="digitar('9')">9</button>
+                <button onclick="operacao('+')">+</button>
+            </div>
+            <div class="linha">
+                <button onclick="digitar('4')">4</button>
+                <button onclick="digitar('5')">5</button>
+                <button onclick="digitar('6')">6</button>
+                <button onclick="operacao('-')">-</button>
+            </div>
+            <div class="linha">
+                <button onclick="digitar('1')">1</button>
+                <button onclick="digitar('2')">2</button>
+                <button onclick="digitar('3')">3</button>
+                <button onclick="operacao('*')">*</button>
+            </div>
+            <div class="linha">
+                <button onclick="digitar('0')">0</button>
+                <button onclick="digitar('.')">.</button>
+                <button onclick="igualar()">=</button>
+                <button onclick="limpar()">C</button>
+            </div>
         </div>
     </div>
-</div>
+
    
       <div id="relogio" style="position: fixed; top: 20px; right: 20px; z-index: 1000;">
     <span id="hora"></span>
@@ -78,7 +80,7 @@
             </div>
         <button onclick="voltarAreaTrabalho()">Voltar</button>
     </div>
-
+  <div id="naoenc" style="font-family: none; display: none;"><h2>File not found</h2><button onclick="voltarnaoenc()" style="font-family: sans-serif;">Voltar</button>
     <script src="script.js"></script>
 </body>
 </html>
