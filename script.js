@@ -54,7 +54,7 @@ function exibirArquivos() {
 
 function abrirArquivo(arquivo) {
     alert('Abrindo arquivo: ' + arquivo); // Simulação de abrir o arquivo
-  window.location.href = "https://www.google.com";
+  window.location.href = "https://www.camo.githubusercontent.com/d3cdcaa40a68dfc91f9d0befaff4b9e7f24631cf9d10245ae19b051db89c67f8/68747470733a2f2f6d65646961342e67697068792e636f6d2f6d656469612f76312e59326c6b505463354d4749334e6a45786557396f6157526c4d3356785a6a417a6332706a61327075656d646b616e4269646e46745a6a46684d4768766554426a636d567065435a6c634431324d563970626e526c636d35686246396e61575a66596e6c666157516d593351395a772f467678585837503969566d584b38483144572f736f757263652e676966";
 }
 
 // Funções existentes (fazerLogin, abrirAplicativo1, abrirAplicativo2, desligar, abrirNavegador, buscarPagina, voltarAreaTrabalho)
