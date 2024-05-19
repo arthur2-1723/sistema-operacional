@@ -1,5 +1,6 @@
 <DOCTYPE html>
   <html lang="pt-br">
+    <head></head>
 <body>
 <h2 style="fony-weight: bold;">Sistema Operacional</h2>
 <p>É Apenas Um Sistema Operacional Simples</p>
