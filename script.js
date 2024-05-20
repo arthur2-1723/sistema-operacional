@@ -202,3 +202,21 @@ function criarCalculadora() {
   botaoLimpar.addEventListener('click', limpar);
   botaoIgualar.addEventListener('click', igualar);
 }
+
+function abrirnavegador() {
+  document.getElementById('navegador').style.display = 'block';
+  
+   document.getElementById('webpage').style.display = 'block';
+  document.getElementById('areaDeTrabalho').style.display = 'none';
+}
+
+const urlBar = document.getElementById('url-bar');
+const goBtn = document.getElementById('go-btn');
+const webpageFrame = document.getElementById('webpage-frame');
+
+goBtn.addEventListener('click', () => {
+    const url = urlBar.value.trim();
+    if (url) {
+        webpageFrame.src = url;
+    }
+});
